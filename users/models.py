@@ -10,3 +10,4 @@ class User(models.Model):
     birthday = models.DateField()
     registration = models.DateField(default=datetime.date.today)
     order = models.ForeignKey(Order, on_delete=models.PROTECT, blank=True, null=True)
+
