@@ -30,7 +30,7 @@ class CsvUploadAdmin(admin.ModelAdmin):
         if request.method == "POST":
             if request.FILES['csv_file'].name.endswith('csv'):
                 file = request.FILES['csv_file']
-                parse(file)
+                parse(self, request, file)
             else:
                 self.message_user(
                     request,
